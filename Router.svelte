@@ -323,7 +323,7 @@ class RouteItem {
         }
 
         // Check if the pattern matches
-        const matches = this._pattern.exec(path)
+        const matches = this._pattern.exec(decodeURIComponent(path))
         if (matches === null) {
             return null
         }
